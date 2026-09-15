@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"name": "mlops",
+			"path": "."
+		},
+		{
+			"name": "notebook",
+			"path": "../Downloads/mlproject-main/notebook"
+		}
+	],
+	"settings": {}
+}
