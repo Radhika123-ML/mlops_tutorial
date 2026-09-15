@@ -9,6 +9,8 @@ from src.exception import CustomException
 from src.logger import logging
 from src.components.data_transformation import DataTransformation
 from src.components.data_transformation import DataTransformationConfig
+from src.components.model_trainer import ModelTrainer
+from src.components.model_trainer import ModelTrainerConfig
 
 
 @dataclass
@@ -58,6 +60,8 @@ if __name__ == "__main__":
         train_data, test_data
     )
 
-    print("Train array shape:", train_arr.shape)
-    print("Test array shape:", test_arr.shape)
+    modeltrainer = ModelTrainer()
+    r2 = modeltrainer.initiate_model_trainer(train_arr, test_arr)
+
+    print("R2 score of best model:", r2)
     print("Preprocessor saved at:", preprocessor_path)
